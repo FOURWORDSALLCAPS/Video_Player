@@ -4,13 +4,32 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style type="text/css">
+    button.css-play {
+        border-style: none;
+        cursor: pointer;
+        color: white;
+        background-color: transparent
+    }
+    div.css-player {
+        width: 800px;
+        height: 600px;
+    }
+    div.css-video {
+        width: 100%;
+        height: 100%;
+    }
+    div.css-background-button {
+        background: black;
+    }
+  </style>
 </head>
 <body>
-  <div id="player" style="width: 800px; height: 600px;">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="background: black">
-      <button style="border-style: none; cursor: pointer; color: white; background-color: transparent" class="js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
-      <button style="border-style: none; cursor: pointer; color: white; background-color: transparent" class="js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+  <div id="player" class="css-player">
+    <div class="js-video-container css-video"></div>
+    <div class="css-background-button">
+      <button class="css-play js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button class="css-play js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
     </div>
   </div>
 
