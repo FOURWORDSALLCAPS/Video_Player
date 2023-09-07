@@ -7,34 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
   <style type="text/css">
-    button.css-play {
+    .vp-button {
         border-style: none;
         cursor: pointer;
         color: white;
         background-color: transparent;
         font-size: 14pt;
         height: 35px;
-        width: 36px;
+        width: 35px;
     }
-    button.css-volume {
-        border-style: none;
-        cursor: pointer;
-        color: white;
-        background-color: transparent;
-        font-size: 14pt;
-        height: 35px;
-        width: 40px;
-    }
-    button.css-fullscreen {
-        border-style: none;
-        cursor: pointer;
-        color: white;
-        background-color: transparent;
-        font-size: 14pt;
-        height: 35px;
-        width: 36px;
-    }
-    div.css-time {
+    .vp-time {
         color: white;
         font-size: 12pt;
         font-family: 'Roboto', sans-serif;
@@ -44,37 +26,39 @@
         height: 37px;
         width: 52px;
     }
-    div.css-player {
+    .vp-player {
         width: 800px;
         height: 600px;
         box-shadow: 0 0 20px rgba(0,0,0,1.5);
         display: flex;
         flex-direction: column;
     }
-    div.css-video {
+    .vp-video {
         flex-grow: 1;
     }
-    div.css-background-button {
+    .vp-background-button {
         background: black;
         display: flex;
-        height: 39px;
-        flex-direction: row;
         align-items: center;
     }
-    div.css-progress {
+    .vp-progress {
       margin: 11px;
       flex-grow: 1;
       background-color: grey;
       height: 5px;
       border-radius: 30px;
-      position: relative;
+      display: flex;
+      align-items: center;
     }
-    div.css-progress-slider {
+    .vp-progress-slider {
       background-color: red;
       height: 100%;
       border-radius: 30px;
     }
-    span.css-slider {
+    .vp-slider {
+      opacity: 0;
+      transition-timing-function: ease-in;
+      transition-duration: 300ms;
       height: 7px;
       width: 7px;
       background-color: red;
@@ -82,29 +66,35 @@
       border-style: solid;
       border-width: 3px;
       border-color: #bbb;
+      margin: -6px;
       display: inline-block;
+    }
+    .vp-progress:hover .vp-slider{
+      opacity: 100%;
+      transition-timing-function: ease-in-out;
+      transition-duration: 300ms;
     }
   </style>
 </head>
 <body>
-  <div id="player" class="css-player">
-    <div class="js-video-container css-video"></div>
-    <div class="css-background-button">
-      <button class="css-play js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
-      <button class="css-play js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
-      <button class="css-volume js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
-      <button class="css-volume js-mute-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
-      <div class="css-time">
+  <div id="player" class="vp-player">
+    <div class="js-video-container vp-video"></div>
+    <div class="vp-background-button">
+      <button class="vp-button js-play-button"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button class="vp-button js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <button class="vp-button js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+      <button class="vp-button js-mute-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <div class="vp-time">
         <span class="js-current-time"></span>
       </div>
-      <div class="js-progress css-progress">
-        <div class="js-progress-slider css-progress-slider"></div>
-        <span class="css-slider"></span>
+      <div class="js-progress vp-progress">
+        <div class="js-progress-slider vp-progress-slider"></div>
+        <span class="vp-slider"></span>
       </div>
-      <div class="css-time">
+      <div class="vp-time">
         <span class="js-duration"></span>
       </div>
-      <button class="css-fullscreen js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
+      <button class="vp-button js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
     </div>
   </div>
 
