@@ -23,7 +23,7 @@
         background-color: transparent;
         font-size: 14pt;
         height: 35px;
-        width: 39px;
+        width: 40px;
     }
     button.css-fullscreen {
         border-style: none;
@@ -35,14 +35,14 @@
         width: 36px;
     }
     div.css-time {
-      color: white;
-      font-size: 12pt;
-      font-family: 'Roboto', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 37px;
-      width: 51px;
+        color: white;
+        font-size: 12pt;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 37px;
+        width: 52px;
     }
     div.css-player {
         width: 800px;
@@ -59,9 +59,30 @@
         display: flex;
         height: 39px;
         flex-direction: row;
+        align-items: center;
     }
-    div.css-flex {
-        flex-grow: 1;
+    div.css-progress {
+      margin: 11px;
+      flex-grow: 1;
+      background-color: grey;
+      height: 5px;
+      border-radius: 30px;
+      position: relative;
+    }
+    div.css-progress-slider {
+      background-color: red;
+      height: 100%;
+      border-radius: 30px;
+    }
+    span.css-slider {
+      height: 7px;
+      width: 7px;
+      background-color: red;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #bbb;
+      display: inline-block;
     }
   </style>
 </head>
@@ -76,7 +97,10 @@
       <div class="css-time">
         <span class="js-current-time"></span>
       </div>
-      <div class="css-flex"></div>
+      <div class="js-progress css-progress">
+        <div class="js-progress-slider css-progress-slider"></div>
+        <span class="css-slider"></span>
+      </div>
       <div class="css-time">
         <span class="js-duration"></span>
       </div>
