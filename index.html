@@ -4,77 +4,10 @@
   <title>Video Player</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-  <style type="text/css">
-    .vp-button {
-        border-style: none;
-        cursor: pointer;
-        color: white;
-        background-color: transparent;
-        font-size: 14pt;
-        height: 35px;
-        width: 35px;
-    }
-    .vp-time {
-        color: white;
-        font-size: 12pt;
-        font-family: 'Roboto', sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 37px;
-        width: 52px;
-    }
-    .vp-player {
-        width: 800px;
-        height: 600px;
-        box-shadow: 0 0 20px rgba(0,0,0,1.5);
-        display: flex;
-        flex-direction: column;
-    }
-    .vp-video {
-        flex-grow: 1;
-    }
-    .vp-background-button {
-        background: black;
-        display: flex;
-        align-items: center;
-    }
-    .vp-progress {
-      margin: 11px;
-      flex-grow: 1;
-      background-color: grey;
-      height: 5px;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-    }
-    .vp-progress-slider {
-      background-color: red;
-      height: 100%;
-      border-radius: 30px;
-    }
-    .vp-slider {
-      opacity: 0;
-      transition-timing-function: ease-in;
-      transition-duration: 300ms;
-      height: 7px;
-      width: 7px;
-      background-color: red;
-      border-radius: 50%;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #bbb;
-      margin: -6px;
-      display: inline-block;
-    }
-    .vp-progress:hover .vp-slider{
-      opacity: 100%;
-      transition-timing-function: ease-in-out;
-      transition-duration: 300ms;
-    }
-  </style>
 </head>
 <body>
   <div id="player" class="vp-player">
