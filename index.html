@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Пример подключения плеера</title>
+  <title>Video Player</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
   <style type="text/css">
     button.css-play {
@@ -32,6 +33,16 @@
         font-size: 14pt;
         height: 35px;
         width: 36px;
+    }
+    div.css-time {
+      color: white;
+      font-size: 12pt;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 37px;
+      width: 51px;
     }
     div.css-player {
         width: 800px;
@@ -62,9 +73,14 @@
       <button class="css-play js-pause-button"><i class="fa fa-pause" aria-hidden="true"></i></button>
       <button class="css-volume js-volume-button"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
       <button class="css-volume js-mute-button"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <div class="css-time">
+        <span class="js-current-time"></span>
+      </div>
       <div class="css-flex"></div>
+      <div class="css-time">
+        <span class="js-duration"></span>
+      </div>
       <button class="css-fullscreen js-fullscreen-button"><i class="fa fa-expand" aria-hidden="true"></i></button>
-
     </div>
   </div>
 
